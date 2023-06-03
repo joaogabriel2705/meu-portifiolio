@@ -1,0 +1,38 @@
+header {
+    padding: 1.5% 10%;
+    
+}
+
+.header-navigation {
+    display: flex;
+    justify-content: space-between;
+    gap: 10%;
+}
+
+.links-box {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-size: var(--small-font-size);
+    transition: .4s ease-in-out;
+}
+
+.nav-link:is(:hover, :focus) {color: var(--terciary-color);}
+
+.menu-mobile {
+    display: none;
+    color: var(--secondary-color);
+    font-size: 24px;
+}
+
+@media (max-width: 869px) {
+    .links-box { display: none;}
+
+    .menu-mobile {
+        display: block;
+    }
+}
