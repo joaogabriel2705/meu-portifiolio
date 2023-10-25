@@ -1,0 +1,42 @@
+@use '../../partials/mixins';
+@use '../../partials/variables';
+
+.section-apresentation {
+    @include mixins.layout-flex-center(center, column);
+
+    &__label {
+        font-size: variables.$fontSize-small;
+        font-weight: variables.$fontWeight-semibold;
+    }
+
+    &__content {
+        font-size: variables.$fontSize-extraBig;
+
+        strong {
+            color: variables.$lightTheme-secondary;
+        }
+    }
+
+    .social-media-icons {
+        margin-top: .5rem;
+        display: flex;
+        gap: 1.5rem;
+
+        &__icon-link {
+            text-decoration: none;
+            font-size: variables.$fontSize-big;
+            color: variables.$lightTheme-terciary;
+            transition: 400ms ease-in-out;
+
+            &:is(:hover, :focus) {
+                color: variables.$lightTheme-secondary;
+            }
+        }
+    }
+
+    &__btn-seeMore {
+        @include mixins.button;
+        margin-top: 2.5rem;
+        min-width: 18%;
+    }
+}

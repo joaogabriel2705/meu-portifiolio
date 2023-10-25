@@ -1,0 +1,60 @@
+@use '../../partials/variables';
+@use '../../partials/mixins';
+@use '../../partials/breakpoints';
+
+.section-about {
+    margin-top: variables.$section-margin-top;
+
+    &__header {
+        @include mixins.layout-section-header;
+
+        &-label {
+            @include mixins.section-label;
+        }
+
+        &-title {
+            @include mixins.layout-section-title
+        }
+    }
+
+    &__container {
+        @include mixins.layout-flex-center(space-between);
+        margin-top: 2.5em;
+        
+        &-content {
+            @include mixins.card;
+            width: 50%;
+            color: variables.$font-color;
+            padding: 16px;
+
+            &-title {
+                font-size: variables.$fontSize-big;
+            }
+
+            &-text {
+                margin-top: 2.5rem;
+                font-size: variables.$fontSize-medium;
+                font-weight: variables.$fontWeight-medium;
+            }
+        }
+
+        @include breakpoints.breakpoint(big-only) {
+            flex-direction: column;
+
+            &-content {
+                margin-top: 2rem;
+                width: 100%;
+            }
+        }
+    }
+
+    &__image {
+        width: 450px;
+        max-width: 100%;
+        transition: 400ms ease-in-out;
+
+        &:is(:hover, :focus) {
+            transform: translateY(-15px)
+        }
+    }
+}

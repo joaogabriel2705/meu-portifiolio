@@ -1,0 +1,67 @@
+@use 'variables';
+@use 'breakpoints';
+
+// =================================================
+// LAYOUT
+// =================================================
+
+@mixin layout-flex-center($justify-content, $flex-direction: row) {
+    display: flex;
+    justify-content: $justify-content;
+    align-items: center;
+    flex-direction: $flex-direction;
+}
+
+@mixin layout-margin {
+    margin: 2rem 12%;
+
+    @include breakpoints.breakpoint(medium-only) {
+        margin: 2rem 5%;
+    }
+}
+
+// SECTIONS LAYOUT
+@mixin layout-section-header {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin layout-section-title {
+    margin-top: 10px;
+    margin-left: 1.5rem;
+}
+
+// =================================================
+// STYLES
+// =================================================
+
+@mixin button {
+    background-color: variables.$lightTheme-secondary;
+    color: variables.$font-color;
+    font-weight: variables.$fontWeight-bold;
+    padding: 16px;
+    border: none;
+    border-radius: 100px;
+    transition: 400ms ease-in-out;
+    cursor: pointer;
+
+    &:is(:hover, :focus) {
+        box-shadow: -4px 8px 0px variables.$lightTheme-terciary;
+    }
+}
+
+@mixin section-label {
+    color: variables.$lightTheme-secondary;
+    font-size: variables.$fontSize-small;
+    font-weight: variables.$fontWeight-bold;
+    border-left: 3px solid variables.$lightTheme-secondary;
+    padding-left: 5px;
+}
+
+@mixin card {
+    background-color: variables.$lightTheme-terciary;
+    border-radius: 6px;
+    box-shadow: 0px 2px 8px variables.$lightTheme-terciary;
+    border-left: 5px solid variables.$darkTheme-secondary-color;
+    transition: 400ms ease-in-out;
+}

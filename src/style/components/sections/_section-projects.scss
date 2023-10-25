@@ -1,0 +1,19 @@
+@use '../../partials/variables';
+@use '../../partials/mixins';
+@use '../../partials/breakpoints';
+
+.section-projects {
+    margin-top: variables.$section-margin-top;
+
+    &__header {
+        @include mixins.layout-section-header;
+
+        &-label {
+            @include mixins.section-label;
+        }
+
+        &-title {
+            @include mixins.layout-section-title
+        }
+    }
+}

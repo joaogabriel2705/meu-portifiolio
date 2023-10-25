@@ -1,0 +1,62 @@
+@use '../partials/mixins';
+@use '../partials/variables';
+@use '../partials/breakpoints';
+
+.header {
+    min-width: 100%;
+    padding: 1.5% 12%;
+
+    &__nav {
+        @include mixins.layout-flex-center(space-between);
+
+        &-image {
+            width: 100px;
+            max-width: 100%;
+        }
+
+        &-links-container {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        &-link {
+            align-self: center;
+
+            text-decoration: none;
+            color: variables.$lightTheme-font-color;
+            font-size: variables.$fontSize-small;
+            transition: 400ms ease-in-out;
+
+            &:is(:hover, :focus) {
+                color: variables.$lightTheme-secondary;
+            }
+
+            &:last-child {
+                @include mixins.button
+            }
+        }
+
+
+
+        .menu-mobile {
+            display: none;
+            color: variables.$lightTheme-font-color;
+            font-size: variables.$fontSize-medium;
+            cursor: pointer;
+        }
+    }
+
+    @include breakpoints.breakpoint(medium-up){
+        .header {
+            padding: 3.5% 10%;
+
+            &__nav-links-container {
+                display: none;
+            }
+        }
+
+        .menu-mobile {
+            display: block;
+        }
+    }
+}

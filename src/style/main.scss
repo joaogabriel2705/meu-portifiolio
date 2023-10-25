@@ -1,0 +1,20 @@
+// =================================================
+// PARTIALS
+// =================================================
+@use 'partials/mixins';
+@use 'partials/reset';
+@use 'partials/variables';
+
+// =================================================
+// COMPONENTS
+// =================================================
+@use 'components/header';
+@use 'components/sections/section-apresentation';
+@use 'components/sections/section-technologies';
+@use 'components/sections/section-about';
+@use 'components/sections/section-projects';
+@use 'components/footer';
+
+.main-content {
+    @include mixins.layout-margin;
+}

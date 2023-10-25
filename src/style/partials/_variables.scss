@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+// =================================================
+// THEME
+// =================================================
+
+// LIGHT THEME
+$lightTheme-primary: #eee;
+$lightTheme-secondary: #533fd6;
+$lightTheme-terciary: #1b1c2f;
+$lightTheme-font-color: #20203f;
+
+// DARK THEME
+$darkTheme-primary-color: #20203f;
+$darkTheme-secondary-color: #533fd6;
+$darkTheme-terciary-color: #1b1c2f;
+$darkTheme-font-color: #fff;
+
+// =================================================
+// FONT
+// =================================================
+
+// FONT PROPRIETIES
+$font-color: #FFF;
+$font-roboto: 'Roboto', sans-serif;
+
+// FONT SIZE
+$fontSize-small: 1.2rem; // 19.2 
+$fontSize-medium: 1.5rem; // 24px 
+$fontSize-big: 2.25rem; // 36px
+$fontSize-extraBig: 3.25rem; // 52px
+
+// FONT WEIGHT
+$fontWeight-medium: 500;
+$fontWeight-semibold: 600;
+$fontWeight-bold: 700;
+
+// =================================================
+// UTILS
+// =================================================
+
+$section-margin-top: 4rem;
