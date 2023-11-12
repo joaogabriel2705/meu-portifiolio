@@ -26,5 +26,6 @@ Este projeto é destinado a ser uma demonstração do meu progresso e habilidade
 
 ## Licença
 
-Este projeto é licenciado sob a [MIT].
+Este projeto é licenciado sob os termos da [Licença MIT](LICENSE).
+
 
