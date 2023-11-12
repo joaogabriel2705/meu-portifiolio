@@ -23,9 +23,3 @@ Este projeto é destinado a ser uma demonstração do meu progresso e habilidade
 
 - Este é um projeto em constante evolução, e estou trabalhando ativamente nele para melhorar minhas habilidades.
 - Sinta-se à vontade para explorar o código e fornecer feedback, mas lembre-se de que este é um projeto em desenvolvimento para fins pessoais.
-
-## Licença
-
-Este projeto é licenciado sob os termos da [Licença MIT](LICENSE).
-
-
