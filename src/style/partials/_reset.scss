@@ -7,4 +7,11 @@
     font-family: variables.$font-roboto;
 }
 
-body { background-color: variables.$lightTheme-primary}
+html {
+    scroll-behavior: smooth;
+}
+
+body { 
+    background-color: variables.$lightTheme-primary;
+    overflow-x: hidden;
+}

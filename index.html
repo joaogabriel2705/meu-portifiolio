@@ -19,15 +19,32 @@
             </a>
 
             <div class="header__nav-links-container">
-                <a href="#" class="header__nav-link">Sobre</a>
-                <a href="#" class="header__nav-link">Tecnológias</a>
-                <a href="#" class="header__nav-link">Projetos</a>
+                <a href="#section-about" class="header__nav-link">Sobre</a>
+                <a href="#section-technologies" class="header__nav-link">Tecnológias</a>
+                <a href="#section-projects" class="header__nav-link">Projetos</a>
                 <a href="#" class="header__nav-link">Blog</a>
-                <a href="#" class="header__nav-link">Contato</a>
             </div>
+            <a href="#" class="contact-link">Contato</a>
+
 
             <div class="menu-mobile">
-                <i class="fa-solid fa-bars"></i>
+                <i class="fa-solid fa-bars" id="menu-icon"></i>
+            </div>
+            <div class="menu-link">
+                <ul class="menu-link__list">
+                    <li class="list__item">
+                        <a href="#section-about" class="item__link">Sobre</a>
+                    </li>
+
+                    <li class="list__item">
+                        <a href="#section-technologies" class="item__link">Tecnologias</a>
+                    </li>
+
+                    <li class="list__item">
+                        <a href="#section-projects" class="item__link">Projetos</a>
+
+                    </li>
+                </ul>
             </div>
         </nav>
     </header>
@@ -36,49 +53,58 @@
         <section class="section-apresentation">
             <div class="section-apresentation__container">
                 <label class="section-apresentation__label" for="section-apresentation__content">Olá!</label>
-                <h1 class="section-apresentation__content">
-                    Eu me chamo <strong>João Gabriel</strong> <br> sou <strong>Desenvolvedor</strong>
+                <h1 class="section-apresentation__content" id="typed-text">
+                    Eu me chamo <strong>João Gabriel</strong> <br> sou desenvolvedor <strong id="work"></strong>
                 </h1>
 
-                <nav class="social-media-icons">
-                    <a href="#" class="social-media-icons__icon-link social-media-icons__icon-link--github-icon">
+                <ul class="skills-list">
+                    <li class="skills-list__item">Front-end</li>
+                    <li class="skills-list__item">Back-end</li>
+                </ul>
+
+                <nav class="social-media-nav">
+                    <a href="https://github.com/joaogabriel2705"
+                        class="social-media-nav__icon-link social-media-nav__icon-link--github-icon">
                         <i class="fa-brands fa-github"></i>
                     </a>
-                    <a href="#" class="social-media-icons__icon-link social-media-icons__icon-link--instagram-icon">
+                    <a href="https://www.instagram.com/apenas_um_jaum/"
+                        class="social-media-nav__icon-link social-media-nav__icon-link--instagram-icon">
                         <i class="fa-brands fa-instagram"></i>
                     </a>
-                    <a href="#" class="social-media-icons__icon-link social-media-icons__icon-link--linkedin-icon">
+                    <a href="#" class="social-media-nav__icon-link social-media-nav__icon-link--linkedin-icon">
                         <i class="fa-brands fa-linkedin"></i>
                     </a>
                 </nav>
             </div>
+
             <button class="section-apresentation__btn-seeMore">Ver mais</button>
         </section>
 
-        <section class="section-about">
-            <div class="section-about__header">
-                <label class="section-about__header-label" for="section-about__title">Sobre</label>
-                <span class="section-about__header-title">Sobre mim</span>
-            </div>
-
+        <section class="section-about" id="section-about">
             <div class="section-about__container">
-                <img src="assets/img/eu-fundo-cortado.png" class="section-about__image" alt="minha foto">
+                <img src="assets/img/eu-removebg-preview.png" class="section-about__image" alt="minha foto">
 
                 <div class="section-about__container-content">
                     <h2 class="section-about__container-content-title">Ola!</h2>
                     <p class="section-about__container-content-text">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed quis aliquam, minus tenetur
-                        recusandae laboriosam facilis nulla et! Ratione explicabo neque quo cumque magni nisi quaerat
-                        nostrum eius distinctio at!
+                        Eu me chamo João Gabriel sou desenvolvedor front-end e back end, atualmente me encontro nos meus
+                        18 anos de idade, sou do Rio grande do sul. Trabalho com tecnologias como HTML, CSS, JS e SCSS
+                        para construção de telas e trabalho com java com spring para as camadas de lógica na aplicação.
                     </p>
                 </div>
             </div>
         </section>
 
-        <section class="section-technologies">
+        <section class="section-technologies" id="section-technologies">
             <div class="section-technologies__header">
-                <label class="section-technologies__header-label" for="section-technologies__title">Tecnológias</label>
-                <span class="section-technologies__header-title">Tecnológias que eu uso.</span>
+                <ul class="header__technologies-list">
+                    <li class="technologies-list__technology">HTML</li>
+                    <li class="technologies-list__technology">CSS</li>
+                    <li class="technologies-list__technology">JS</li>
+                    <li class="technologies-list__technology">SCSS</li>
+                    <li class="technologies-list__technology">Java</li>
+                    <li class="technologies-list__technology">Spring</li>
+                </ul>
             </div>
 
             <ul class="section-technologies__list">
@@ -101,13 +127,83 @@
                     <i class="fa-brands fa-sass section-technologies_list-item--icon"></i>
                     <span class="section-technologies__list-item-title">Sass</span>
                 </li>
+
+                <li class="section-technologies__list-item">
+                    <i class="fa-brands fa-java section-technologies_list-item--icon"></i>
+                    <span class="section-technologies__list-item-title">Java</span>
+                </li>
+
+                <li class="section-technologies__list-item">
+                    <i class="fa-solid fa-leaf section-technologies_list-item--icon"></i>
+                    <span class="section-technologies__list-item-title">Spring</span>
+                </li>
             </ul>
         </section>
 
-        <section class="section-projects">
+        <section class="section-projects" id="section-projects">
             <div class="section-projects__header">
                 <label class="section-projects__header-label" for="section-projects__title">Projetos</label>
                 <span class="section-projects__header-title">Confira alguns de meus projetos!</span>
+            </div>
+
+            <div class="projects-container">
+                <article class="project">
+                    <h2 class="project__title">Everthing Express</h2>
+                    <p class="project__description">
+                        E-commerce desenvolvido para o módulo do meu curso que abordava tecnologias front-end
+                        como HTML, CSS e JS
+                    </p>
+
+                    <ul class="project__technologies-list">
+                        <li class="technologies-list__item">
+                            <i class="fa-brands fa-html5"></i>
+                        </li>
+
+                        <li class="technologies-list__item">
+                            <i class="fa-brands fa-css3"></i>
+                        </li>
+
+                        <li class="technologies-list__item">
+                            <i class="fa-brands fa-js"></i>
+                        </li>
+                    </ul>
+
+                    <div class="project-bottom">
+                        <span class="project-bottom__type-project">WEB</span>
+                        <button class="project-bottom__see-project-btn">Ver projeto</button>
+                    </div>
+                </article>
+
+                <article class="project">
+                    <h2 class="project__title">Canvis</h2>
+                    <p class="project__description">
+                        Site de noticías desenvolvido para o módulo do meu curso que abordava java para o
+                        back-end.
+                    </p>
+
+                    <ul class="project__technologies-list">
+                        <li class="technologies-list__item">
+                            <i class="fa-brands fa-html5"></i>
+                        </li>
+
+                        <li class="technologies-list__item">
+                            <i class="fa-brands fa-css3"></i>
+                        </li>
+
+                        <li class="technologies-list__item">
+                            <i class="fa-brands fa-js"></i>
+                        </li>
+
+                        <li class="technologies-list__item">
+                            <i class="fa-brands fa-java"></i>
+                        </li>
+                    </ul>
+
+                    <div class="project-bottom">
+                        <span class="project-bottom__type-project">WEB</span>
+                        <button class="project-bottom__see-project-btn">Ver projeto</button>
+                    </div>
+                </article>
             </div>
         </section>
 
@@ -115,7 +211,11 @@
 
     <footer class="footer">
         <span class="footer__copyright">Feito por João Gabriel &copy; 2023</span>
-    </footer> 
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="src/js/menu-mobile.js"></script>
+    <script src="src/js/typed.js"></script>
 </body>
 
 </html>

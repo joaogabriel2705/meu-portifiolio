@@ -3,17 +3,82 @@
 @use '../../partials/breakpoints';
 
 .section-projects {
-    margin-top: variables.$section-margin-top;
+    margin: variables.$section-margin-top variables.$body-horizontal-margin;
 
     &__header {
-        @include mixins.layout-section-header;
+        display: flex;
+        flex-direction: column;
 
         &-label {
-            @include mixins.section-label;
+            color: variables.$lightTheme-secondary;
+            font-size: variables.$fontSize-small;
+            font-weight: variables.$fontWeight-bold;
+            border-left: 3px solid variables.$lightTheme-secondary;
+            padding-left: 5px;
         }
 
         &-title {
-            @include mixins.layout-section-title
+            margin-top: 10px;
+            margin-left: 1.5rem;
+        }
+    }
+
+    .projects-container {
+        margin-top: 2.4em;
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        .project {
+            @include mixins.card;
+            width: 35vw;
+
+            display: flex;
+            flex-direction: column;
+            gap: 1.2em;
+
+            
+
+            &__description {
+                text-align: justify;
+            }
+
+            &__technologies-list {
+                list-style: none;
+                display: flex;
+                gap: 1.2em;
+            }
+
+            &-bottom {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+    
+                &__type-project {
+                    font-size: variables.$fontSize-medium;
+                    font-weight: variables.$fontWeight-bold
+                }
+    
+                &__see-project-btn {
+                    @include mixins.button;
+                }
+            }
+        }
+
+        
+
+        .fa-brands {
+            font-size: variables.$fontSize-medium;
+        }
+
+        @include breakpoints.breakpoint(medium-devices) {
+            flex-direction: column;
+
+            .project {
+                width: 100%;
+                margin-top: 1.2em;
+            }
         }
     }
 }

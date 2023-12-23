@@ -14,7 +14,3 @@
 @use 'components/sections/section-about';
 @use 'components/sections/section-projects';
 @use 'components/footer';
-
-.main-content {
-    @include mixins.layout-margin;
-}

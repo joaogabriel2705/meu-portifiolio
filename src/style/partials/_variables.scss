@@ -9,12 +9,13 @@ $lightTheme-primary: #eee;
 $lightTheme-secondary: #533fd6;
 $lightTheme-terciary: #1b1c2f;
 $lightTheme-font-color: #20203f;
+$lightTheme-shadow: #d2cdcd;
+$bg-white: #fff;
 
 // DARK THEME
 $darkTheme-primary-color: #20203f;
 $darkTheme-secondary-color: #533fd6;
 $darkTheme-terciary-color: #1b1c2f;
-$darkTheme-font-color: #fff;
 
 // =================================================
 // FONT
@@ -31,6 +32,7 @@ $fontSize-big: 2.25rem; // 36px
 $fontSize-extraBig: 3.25rem; // 52px
 
 // FONT WEIGHT
+$fontWeight-regular: 400;
 $fontWeight-medium: 500;
 $fontWeight-semibold: 600;
 $fontWeight-bold: 700;
@@ -39,4 +41,5 @@ $fontWeight-bold: 700;
 // UTILS
 // =================================================
 
-$section-margin-top: 4rem;
+$section-margin-top: 4.2rem;
+$body-horizontal-margin: 12%;

@@ -1,8 +1,11 @@
 @use '../../partials/mixins';
 @use '../../partials/variables';
+@use '../../partials/breakpoints';
 
 .section-apresentation {
-    @include mixins.layout-flex-center(center, column);
+    @include mixins.flex-layout-center(center, column);
+    @include mixins.body-margin;
+    margin-top: variables.$section-margin-top;
 
     &__label {
         font-size: variables.$fontSize-small;
@@ -15,28 +18,43 @@
         strong {
             color: variables.$lightTheme-secondary;
         }
-    }
 
-    .social-media-icons {
-        margin-top: .5rem;
-        display: flex;
-        gap: 1.5rem;
-
-        &__icon-link {
-            text-decoration: none;
+        @include breakpoints.breakpoint(small-up-devices) {
             font-size: variables.$fontSize-big;
-            color: variables.$lightTheme-terciary;
-            transition: 400ms ease-in-out;
 
-            &:is(:hover, :focus) {
-                color: variables.$lightTheme-secondary;
-            }
         }
     }
-
+    
     &__btn-seeMore {
         @include mixins.button;
         margin-top: 2.5rem;
-        min-width: 18%;
+        min-width: 15%;
     }
 }
+
+.skills-list {
+    display: flex;
+    gap: 2em;
+    margin-top: .5em;
+    margin-left: .4em;
+    list-style-type: square;
+}
+
+.social-media-nav {
+    margin-top: 1.2rem;
+    display: flex;
+    gap: 1.5rem;
+
+    &__icon-link {
+        text-decoration: none;
+        font-size: variables.$fontSize-big;
+        color: variables.$lightTheme-terciary;
+        transition: 400ms ease-in-out;
+
+        &:hover, :focus {
+            color: variables.$lightTheme-secondary;
+        }
+    }
+}
+
+

@@ -5,33 +5,51 @@
     margin-top: variables.$section-margin-top;
 
     &__header {
-        display: flex;
-        flex-direction: column;
+        width: 100%;
+        background-color: variables.$lightTheme-terciary;
+        padding: 2.4em;
 
-        &-label {
-            @include mixins.section-label;
-        }
+        .header__technologies-list {
+            list-style: square;
+            display: flex;
+            gap: 3.4em;
+            color: variables.$font-color;
+            font-size: variables.$fontSize-big;
+            animation: horizontal 8s linear infinite;
 
-        &-title {
-            @include mixins.layout-section-title
+            @keyframes horizontal {
+                from {
+                    transform: translateX(-100%);
+                }
+
+                to {
+                    transform: translateX(105%);
+                }
+            }
         }
     }
 
     &__list {
+        @include mixins.grid-layout(3, 1fr);
+        gap: 2.4em;
         list-style: none;
-        margin-top: 2.5em;
+        margin: variables.$section-margin-top 
+                variables.$body-horizontal-margin;
 
         &-item {
             display: flex;
             padding: 16px;
             margin-bottom: .5em;
 
-            @include mixins.card;
-            
+            background-color: variables.$bg-white;
+            box-shadow: 0 0 10px variables.$lightTheme-shadow;
+        
+            border-top: 6px solid variables.$lightTheme-terciary;
+            border-radius: 3px;
             // icons
-            .fa-brands {
+            i {
                 font-size: variables.$fontSize-extraBig;
-                color: variables.$font-color;
+                color: variables.$lightTheme-font-color;
             }
 
             &-title {
@@ -40,12 +58,7 @@
                 margin-left: 15px;
                 font-size: variables.$fontSize-medium;
                 font-weight: variables.$fontWeight-bold;
-                color: variables.$font-color;
-            }
-
-            &:is(:hover, :focus) {
-                background-color: variables.$lightTheme-secondary;
-                transform: translateY(-10px) scale(1.2);
+                color: variables.$lightTheme-font-color;
             }
         }
     }

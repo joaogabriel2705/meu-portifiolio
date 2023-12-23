@@ -3,58 +3,45 @@
 @use '../../partials/breakpoints';
 
 .section-about {
-    margin-top: variables.$section-margin-top;
-
-    &__header {
-        @include mixins.layout-section-header;
-
-        &-label {
-            @include mixins.section-label;
-        }
-
-        &-title {
-            @include mixins.layout-section-title
-        }
-    }
+    @include mixins.body-margin;
 
     &__container {
-        @include mixins.layout-flex-center(space-between);
+        @include mixins.flex-layout-center(space-between, null, true);
+        @include mixins.card;
+
         margin-top: 2.5em;
-        
+
+
         &-content {
-            @include mixins.card;
-            width: 50%;
-            color: variables.$font-color;
-            padding: 16px;
+            padding-left: min(1.5em, 3.5em);
+            // width: 50%;
+            align-self: stretch;
 
             &-title {
                 font-size: variables.$fontSize-big;
+
+                @include breakpoints.breakpoint(medium-devices) {
+                    margin-top: .5em;
+                }
             }
 
             &-text {
-                margin-top: 2.5rem;
+                margin-top: 2.4rem;
+                text-align: justify;
+
                 font-size: variables.$fontSize-medium;
                 font-weight: variables.$fontWeight-medium;
             }
-        }
 
-        @include breakpoints.breakpoint(big-only) {
-            flex-direction: column;
-
-            &-content {
-                margin-top: 2rem;
-                width: 100%;
+            @include breakpoints.breakpoint(medium-devices) {
+                padding-left: 0;
             }
         }
     }
 
     &__image {
-        width: 450px;
+        width: 350px;
         max-width: 100%;
-        transition: 400ms ease-in-out;
-
-        &:is(:hover, :focus) {
-            transform: translateY(-15px)
-        }
+        border-radius: 3px;
     }
 }

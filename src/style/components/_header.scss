@@ -3,60 +3,95 @@
 @use '../partials/breakpoints';
 
 .header {
-    min-width: 100%;
-    padding: 1.5% 12%;
-
+    @include mixins.body-margin;
     &__nav {
-        @include mixins.layout-flex-center(space-between);
+        @include mixins.flex-layout-center(space-between);
 
         &-image {
-            width: 100px;
             max-width: 100%;
+            width: 100px;
         }
 
         &-links-container {
             display: flex;
-            gap: 1.5rem;
+            gap: 1.5em;
         }
 
         &-link {
             align-self: center;
-
             text-decoration: none;
             color: variables.$lightTheme-font-color;
             font-size: variables.$fontSize-small;
             transition: 400ms ease-in-out;
 
-            &:is(:hover, :focus) {
+            &:hover,
+            &:focus {
                 color: variables.$lightTheme-secondary;
-            }
-
-            &:last-child {
-                @include mixins.button
             }
         }
 
-
+        .contact-link {
+            @include mixins.button;
+            min-width: 10%;
+        }
 
         .menu-mobile {
+            position: relative;
             display: none;
             color: variables.$lightTheme-font-color;
             font-size: variables.$fontSize-medium;
             cursor: pointer;
+            z-index: 1;
         }
-    }
 
-    @include breakpoints.breakpoint(medium-up){
-        .header {
-            padding: 3.5% 10%;
+        .menu-link {
+            position: absolute;
+            display: none;
+            z-index: 0;
+            top: 100px;
+            right: 0;
+            left: 0;
+            background-color: variables.$bg-white;
+            border-bottom: 4px solid variables.$lightTheme-secondary;
 
-            &__nav-links-container {
+            &__list {
+                @include mixins.flex-layout-center(center, column);
+                list-style: none;
+
+                .list__item {
+                    padding-block: 1.2em;
+
+                    .item__link {
+                        text-decoration: none;
+                        color: variables.$lightTheme-font-color;
+                        font-size: variables.$fontSize-small;
+
+                    }
+
+                    &:not(:last-child) {
+                        text-align: center;
+                        width: 100%;
+                        border-bottom: 2px solid variables.$lightTheme-terciary;
+                    }
+                }
+            }
+
+        }
+
+        @include breakpoints.breakpoint(medium-devices) {
+
+            .header__nav-links-container,
+            .contact-link {
                 display: none;
             }
-        }
 
-        .menu-mobile {
-            display: block;
+            .menu-mobile {
+                display: block;
+            }
         }
+    }
+    
+    .show {
+        display: block;
     }
 }
