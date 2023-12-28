@@ -45,15 +45,14 @@
         }
 
         .menu-link {
+            min-width: 250px;
             position: absolute;
             display: none;
             z-index: 1;
             top: 100px;
             right: 0;
-            min-width: 250px;
             border-radius: 15px 0 0 15px;
             background-color: variables.$bg-white;
-            // border-bottom: 4px solid variables.$lightTheme-secondary;
 
             &__list {
                 @include mixins.flex-layout-center(center, column);
@@ -68,12 +67,6 @@
                         font-size: variables.$fontSize-small;
 
                     }
-
-                    // &:not(:last-child) {
-                    //     text-align: center;
-                    //     width: 100%;
-                    //     border-bottom: 2px solid variables.$lightTheme-terciary;
-                    // }
                 }
             }
 
