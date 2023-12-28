@@ -44,22 +44,22 @@
             z-index: 1;
         }
 
-        .menu-link {
+         .menu-link {
+            min-width: 250px;
             position: absolute;
             display: none;
-            z-index: 0;
+            z-index: 1;
             top: 100px;
             right: 0;
-            left: 0;
+            border-radius: 15px 0 0 15px;
             background-color: variables.$bg-white;
-            border-bottom: 4px solid variables.$lightTheme-secondary;
 
             &__list {
                 @include mixins.flex-layout-center(center, column);
                 list-style: none;
 
                 .list__item {
-                    padding-block: 1.2em;
+                    padding-block: 2.4em;
 
                     .item__link {
                         text-decoration: none;
@@ -67,14 +67,9 @@
                         font-size: variables.$fontSize-small;
 
                     }
-
-                    &:not(:last-child) {
-                        text-align: center;
-                        width: 100%;
-                        border-bottom: 2px solid variables.$lightTheme-terciary;
-                    }
                 }
             }
+        }
 
         }
 
