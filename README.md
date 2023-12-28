@@ -5,11 +5,10 @@ Este é o repositório do meu portfólio pessoal, onde estou praticando minhas h
 ## Funcionalidades Atuais
 
 - Página principal do portfólio
-- Estilos básicos com CSS
+- Estilos básicos com SCSS
 
 ## Funcionalidades Futuras (na branch alternativa)
 
-- Organização de estilos com SCSS
 - Melhorias no design e layout
 
 ## Como Visualizar o Projeto

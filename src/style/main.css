@@ -75,12 +75,12 @@ body {
 .header__nav .menu-link {
   position: absolute;
   display: none;
-  z-index: 0;
+  z-index: 1;
   top: 100px;
   right: 0;
-  left: 0;
+  min-width: 250px;
+  border-radius: 15px 0 0 15px;
   background-color: #fff;
-  border-bottom: 4px solid #533fd6;
 }
 .header__nav .menu-link__list {
   display: flex;
@@ -90,17 +90,12 @@ body {
   list-style: none;
 }
 .header__nav .menu-link__list .list__item {
-  padding-block: 1.2em;
+  padding-block: 2.4em;
 }
 .header__nav .menu-link__list .list__item .item__link {
   text-decoration: none;
   color: #20203f;
   font-size: 1.2rem;
-}
-.header__nav .menu-link__list .list__item:not(:last-child) {
-  text-align: center;
-  width: 100%;
-  border-bottom: 2px solid #1b1c2f;
 }
 @media (max-width: 48em) {
   .header__nav .header__nav-links-container,
